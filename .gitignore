@@ -1,0 +1,46 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iml
+*.csv
+.DS_Store
+target/
+*.swp
+*.swo
+*.log
+logs/
+/target
+.project
+.vagrant
+.classpath
+.settings
+nccic_license.txt
+repast-*/*.iml
+repast-*/*.csv
+repast-*/.DS_Store
+repast-*/target/*
+repast-*/*.swp
+repast-*/target
+repast-*/.project
+repast-*/.classpath
+repast-*/.settings
+repast-*/*.log
+*.key
+nccic_license.txt
+nciic.cer
+*.gradle
+gradle
+gradlew*
+rebel.xml
