@@ -54,6 +54,11 @@
             <artifactId>base-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>plant</groupId>
+            <artifactId>repast-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 
