@@ -1,17 +1,16 @@
-package com.common.model;
-
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
+package com.repast;
 
 /**
  * @author li.wei
- * @date 2019/7/13 16:05
- **/
+ * @date 2019-07-22
+ */
 public class UserInfo {
+
     private int userId;
     private String account;
     private String passWord;
     private String phoneNum;
+
 
     public int getUserId() {
         return userId;

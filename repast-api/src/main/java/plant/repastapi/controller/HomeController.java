@@ -3,7 +3,6 @@ package plant.repastapi.controller;
 import com.common.dict.SystemDictionary;
 import demo.DemoVo;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +32,5 @@ public class HomeController {
     public String demo(@RequestBody DemoVo demoVo){
         return demoVo.name+demoVo.age+demoVo.address;
     }
-
 
 }

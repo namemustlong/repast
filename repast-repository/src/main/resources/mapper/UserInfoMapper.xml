@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="UserInfoMapper">
+
+    <select id="selectUserInfoByUserId" parameterType="Integer" resultType="UserInfo">
+        select userId,account,passWord,phoneNum
+         from user_info
+    </select>
+</mapper>
