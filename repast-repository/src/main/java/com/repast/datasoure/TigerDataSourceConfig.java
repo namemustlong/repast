@@ -1,7 +1,6 @@
 package com.repast.datasoure;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.common.model.UserInfo;
 import com.repast.conf.DataSourceProperties;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -10,7 +9,6 @@ import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -26,7 +24,6 @@ import java.util.Map;
  * @author li.wei
  * @date 2019-07-22
  */
-@Configuration
 public class TigerDataSourceConfig {
     @Autowired
     private DataSourceProperties properties;
@@ -85,7 +82,7 @@ public class TigerDataSourceConfig {
         sqlSessionFactoryBean.setDataSource(dataSource);
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath*:mapper/*Mapper.xml"));
-        sqlSessionFactoryBean.setTypeAliases(new Class[]{String.class,Integer.class,Long.class, BigDecimal.class, Map.class, List.class, UserInfo.class});
+        sqlSessionFactoryBean.setTypeAliases(new Class[]{String.class,Integer.class,Long.class, BigDecimal.class, Map.class, List.class});
         sqlSessionFactoryBean.setVfs(SpringBootVFS.class);
         return sqlSessionFactoryBean.getObject();
     }

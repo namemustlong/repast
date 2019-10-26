@@ -1,12 +1,14 @@
 package plant.repastapi;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
-@ComponentScan(value ={"com.repast","plant.repastapi"})
+@ComponentScan(value ={"plant.repastapi","com.common","com.repast"})
+@MapperScan("mapper")
 public class RepastApiApplication {
 
     public static void main(String[] args) {

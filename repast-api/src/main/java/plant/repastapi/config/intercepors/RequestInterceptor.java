@@ -1,8 +1,5 @@
 package plant.repastapi.config.intercepors;
 
-import com.common.dict.HttpStatusDict;
-import com.common.dict.UserDictionary;
-import com.common.model.UserInfo;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -22,13 +19,7 @@ public class RequestInterceptor implements HandlerInterceptor {
                              HttpServletResponse response,
                              Object handler) throws Exception {
         HttpSession session = request.getSession();
-        UserInfo userInfo = (UserInfo)session.getAttribute(UserDictionary.LOGIN_USER_AGENT);
-        if(null == userInfo){
-            response.setStatus(HttpStatusDict.Unauthorized);
-            response.setHeader("Content-type", HTTP_RESPONSE_TYPE);
-            response.getWriter().write("请先登录");
-            return false;
-        }
+
         return true;
     }
 }
